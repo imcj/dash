@@ -4,12 +4,13 @@ import './App.css';
 import "react-grid-layout/css/styles.css";
 import 'react-resizable/css/styles.css';
 import { useEffect, useState } from "react";
+import Clock from "./Clock/Clock";
 
 function App() {
   const [width, setWidth] = useState<number>(0);
 
   const layout = [
-    { i: "1", x: 0, y: 0, w: 5, h: 1}
+    { i: "clock", x: 0, y: 0, w: 5, h: 1}
   ];
 
   useEffect(() => {
@@ -31,7 +32,10 @@ function App() {
             style={{
               backgroundColor: "#efefef"
             }}
-          >{item.i}</div>
+          >
+
+            {item.i === "clock" && <Clock />}
+          </div>
         ))}
       </GridLayout>
     </div>

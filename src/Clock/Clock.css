@@ -1,0 +1,9 @@
+.clock {
+    font-family: "Orbitron";
+    font-size: 5em;
+    display: flex;
+}
+
+.clock > div {
+    margin: 5px;
+}
